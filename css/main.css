@@ -472,6 +472,10 @@ svg {
           transform: scale(1.12);
 }
 
+.up-btn:focus {
+  border: 1px dashed var(--accent-color);
+}
+
 /* ============== Logo=========== */
 .top {
   position: absolute;
@@ -1170,7 +1174,7 @@ svg {
 .about-img {
   width: 50%;
   height: 600px;
-  background: url("./images/IMG_20200518_143707_995.jpg") no-repeat center/cover;
+  background: url("../images/IMG_20200518_143707_995.jpg") no-repeat center/cover;
   border-radius: 4px;
 }
 

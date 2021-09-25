@@ -19,3 +19,7 @@
 .up-btn:active {
     transform: scale(1.12);
 }
+
+.up-btn:focus {
+    border: 1px dashed var(--accent-color);
+}
