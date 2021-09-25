@@ -109,7 +109,7 @@ navItems.forEach((item) => {
 
 // Getting stats from github for this repo
 function getGithubStats() {
-    const url = 'https://api.github.com/repos/nabeelahmed1699/Weather-App';
+    const url = 'https://api.github.com/repos/nabeelahmed1699/Personal-Portfolio-V1';
     fetch(url)
         .then(resp => resp.json())
         .then(repo => {
