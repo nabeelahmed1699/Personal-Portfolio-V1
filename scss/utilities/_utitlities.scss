@@ -30,6 +30,10 @@ a {
     text-decoration: none;
 }
 
+*:focus {
+    outline: none;
+}
+
 button,
 input {
     border: none;
@@ -47,6 +51,11 @@ img {
 
 
 /*=============== REUSABLE CSS CLASSES ===============*/
+
+:focus {
+    outline: 2px dashed var(--accent-color);
+    outline-offset: 4px;
+}
 
 .section {
     width: 100%;

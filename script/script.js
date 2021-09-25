@@ -20,6 +20,21 @@ upBtn.addEventListener('click', () => {
 })
 showMoreBtn.addEventListener('click', showHideProjects);
 
+
+/*==================== REMOVE MENU MOBILE ====================*/
+
+const navLink = document.querySelectorAll('.nav-item')
+
+function linkAction() {
+    // When we click on each nav__link, we remove the show-menu class
+    navbar.classList.remove('navbar-open')
+    hamburger.classList.remove('hamburger-open');
+    hamburger2.classList.remove('hamburger-open');
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
+
+
+
 // For adding after-header  to lower sidebar when header scrolled
 window.addEventListener('scroll', () => {
     const headerHeight = document.querySelector('header').getBoundingClientRect().height;
