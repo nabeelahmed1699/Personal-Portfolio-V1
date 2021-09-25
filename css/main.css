@@ -1386,6 +1386,7 @@ svg {
 .form {
   width: 70%;
   max-width: 1000px;
+  min-width: 300px;
   padding: 20px;
   margin: 0 auto;
   display: -webkit-box;
