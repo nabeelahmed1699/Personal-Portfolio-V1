@@ -246,10 +246,7 @@ body {
   min-width: 100%;
   min-height: 100vh;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -1174,7 +1171,7 @@ svg {
 .about-img {
   width: 50%;
   height: 600px;
-  background: url("../../images/IMG_20200518_143707_995.jpg") no-repeat center/cover;
+  background: url("/images/IMG_20200518_143707_995.jpg") no-repeat center/cover;
   border-radius: 4px;
 }
 
