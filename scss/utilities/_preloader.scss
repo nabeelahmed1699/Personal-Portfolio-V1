@@ -14,8 +14,8 @@ body {
 .pre-loader {
     min-width: 100%;
     min-height: 100vh;
-    position: absolute;
-    inset: 0;
+    position: fixed;
+    // inset: 0;
     display: grid;
     justify-content: center;
     align-items: center;

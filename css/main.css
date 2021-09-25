@@ -245,8 +245,7 @@ body {
 .pre-loader {
   min-width: 100%;
   min-height: 100vh;
-  position: absolute;
-  inset: 0;
+  position: fixed;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -1171,7 +1170,7 @@ svg {
 .about-img {
   width: 50%;
   height: 600px;
-  background: url("/images/IMG_20200518_143707_995.jpg") no-repeat center/cover;
+  background: url("./images/IMG_20200518_143707_995.jpg") no-repeat center/cover;
   border-radius: 4px;
 }
 
