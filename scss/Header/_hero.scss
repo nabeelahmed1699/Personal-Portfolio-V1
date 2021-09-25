@@ -1,0 +1,81 @@
+/*==================Hero=================*/
+
+.hero {
+    width: 100%;
+    max-width: 1550px;
+    min-height: 100%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 0 4rem;
+    margin-bottom: 0;
+    display: flex;
+}
+
+.hero-text {
+    align-self: center;
+    text-align: left;
+    width: 45%;
+    max-width: 600px;
+}
+
+.hero-sub {
+    position: relative;
+    font-size: var(--h2-font-size);
+    font-family: var(--secondary-font);
+    font-weight: var(--font-light);
+    line-height: 1.5;
+}
+
+.hero-heading {
+    position: relative;
+    font-size: var(--bigger-font-size);
+    color: var(--accent-color);
+    margin-left: 45px;
+}
+
+.hero-img-container {
+    width: object-fit;
+    max-height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 10px solid var(--lower-sidebar-color);
+    border-radius: 2px;
+    position: relative;
+    z-index: 11;
+}
+
+.hero-img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--accent-color);
+    mix-blend-mode: color;
+    transition: all 0.3s ease;
+    z-index: 12;
+}
+
+.hero-img-container:hover::before {
+    background: none;
+}
+
+.hero-img-container img:hover {
+    mix-blend-mode: unset;
+}
+
+.hero-btn {
+    position: relative;
+    margin-top: 3rem;
+    border-color: var(--accent-color);
+    background: transparent;
+    color: var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    border-color: var(--primary-color);
+    background: var(--accent-color);
+    color: var(--primary-color);
+}

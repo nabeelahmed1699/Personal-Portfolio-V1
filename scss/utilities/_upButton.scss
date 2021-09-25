@@ -1,0 +1,21 @@
+.up-btn {
+    position: fixed;
+    right: 10%;
+    bottom: 15%;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.6), 20px 20px 40px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    z-index: 9999;
+    transition: all 0.3s ease-in;
+}
+
+.up-btn:hover,
+.up-btn:active {
+    transform: scale(1.12);
+}

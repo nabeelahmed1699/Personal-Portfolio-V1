@@ -1,0 +1,159 @@
+/* ============== PreLoader ================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&family=Montserrat:wght@400;600&family=Oswald:wght@500&family=Pacifico&family=Roboto:ital,wght@0,400;0,900;1,500&display=swap');
+body {
+    width: 100%;
+    font-family: var(--primary-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    position: relative;
+}
+
+.pre-loader {
+    min-width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    z-index: 999;
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+}
+
+.svg-file path {
+    fill: transparent;
+    stroke-width: 3;
+    stroke: var(--accent-color);
+}
+
+.svg-file.z-logo path {
+    stroke-dasharray: 550;
+    stroke-dashoffset: 0;
+}
+
+.svg-file.z-logo path {
+    animation: animate-zlogo 3s linear infinite;
+}
+
+svg {
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 1));
+    transform: scale(2);
+}
+
+.svg-file h2 {
+    font-family: 'Roboto', cursive;
+    transform: translate(0, 50px) skewX(-210deg) rotate(-6deg);
+    font-size: 3em;
+    color: var(--accent-color);
+}
+
+
+/* .svg-file h2 span:nth-child(1) {
+    animation: fadein-fadeout 1s infinite;
+} */
+
+.svg-file span {
+    animation: dots 2.5s steps(6, end) infinite;
+    font-size: 5em;
+    display: block;
+    transform: translate(0, 65px) skewX(-210deg) rotate(-6deg);
+    background-color: var(--accent-color);
+    width: 8px;
+    height: 5px;
+}
+
+
+/* .svg-file h2 span:nth-last-child(1) {
+    animation: fadein-fadeout 2s infinite;
+} */
+
+@keyframes dots {
+    0%,
+    20% {
+        background-color: rgba(191, 224, 215, 0.08);
+        box-shadow: 0.25em 0 0 rgba(191, 224, 215, 0.08), 0.5em 0 0 rgba(191, 224, 215, 0.08);
+    }
+    40% {
+        background-color: var(--accent-color);
+        box-shadow: 0.25em 0 0 rgba(191, 224, 215, 0.08), 0.5em 0 0 rgba(191, 224, 215, 0.08);
+    }
+    60% {
+        box-shadow: 0.25em 0 0 var(--accent-color), 0.5em 0 0 rgba(191, 224, 215, 0.08);
+    }
+    80%,
+    100% {
+        box-shadow: 0.25em 0 0 var(--accent-color), 0.5em 0 0 var(--accent-color);
+    }
+}
+
+@keyframes fadein-fadeout {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* @keyframes animate-zlogo {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    20% {
+        stroke-dashoffset: 550;
+        fill: transparent;
+    }
+    40% {
+        fill: transparent;
+        stroke-dashoffset: 1100;
+    }
+    60% {
+        stroke-dashoffset: 1100;
+        fill: #89c9b8;
+    }
+    80% {
+        stroke-width: 0;
+        fill: #89c9b8;
+    }
+    100% {
+        stroke-dashoffset: 0; 
+        stroke-width: 3;
+        fill: transparent;
+    }
+} */
+
+@keyframes animate-zlogo {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 550;
+        fill: transparent;
+    }
+    60% {
+        fill: transparent;
+        stroke-dashoffset: 1100;
+    }
+    80% {
+        stroke-dashoffset: 1100;
+        fill: var(--accent-color);
+    }
+    100% {
+        stroke-width: 0;
+        fill: var(--accent-color);
+    }
+}
+
+
+/* ======================= Pre loader end ===================== */

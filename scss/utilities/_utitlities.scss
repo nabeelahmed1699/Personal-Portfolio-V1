@@ -1,0 +1,171 @@
+/*=============== BASE ===============*/
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --text-gradient: linear-gradient(hsl(24, 78%, 65%), hsl(30, 86%, 73%));
+    --color: hsl(30, 86%, 73%);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+*::selection {
+    background: var(--text-color);
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    padding-top: 4rem;
+}
+
+.section:nth-child(even) {
+    background: var(--upper-side-color);
+}
+
+.section-title {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-2-5);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    background: var(--accent-color);
+}
+
+.section-title:nth-child(even):after {
+    right: 0;
+    left: unset;
+}
+
+.section__title-gradient {
+    background: var(--text-gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.btn {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    font-size: var(--h3-font-size);
+    padding: 0.8em 1.8em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/*=============== LAYOUT ===============*/
+
+.main {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 968px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+
+.grid {
+    display: -ms-grid;
+    display: grid;
+}
+
+.lowOpacity {
+    opacity: 0.7;
+}
+
+.blur {
+    overflow: hidden;
+}
+
+
+/*=============== Header ===============*/
+
+.header {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/* ===========Scroll bar ============ */
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

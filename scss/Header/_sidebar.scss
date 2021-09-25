@@ -1,0 +1,134 @@
+/* ========== sidebar =========== */
+
+.sidebar {
+    width: 5.81%;
+    height: 100vh;
+    min-height: 600px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 112;
+}
+
+.upper-sidebar,
+.lower-sidebar {
+    min-height: 50%;
+    text-align: center;
+}
+
+.upper-sidebar {
+    background: var(--upper-side-color);
+    display: flex;
+    justify-content: center;
+}
+
+.hamburger {
+    width: 30%;
+    height: 30px;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.line {
+    width: 100%;
+    min-width: 30px;
+    height: 2px;
+    background: var(--text-color);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.line::before,
+.line::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 2px;
+    background: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.line::before {
+    width: 100%;
+    top: -8px;
+}
+
+.line::after {
+    width: 60%;
+    top: 8px;
+}
+
+.hamburger:hover .line,
+.hamburger:hover .line::before,
+.hamburger:hover .line::after {
+    background-color: #fff;
+}
+
+.hamburger-open {
+    opacity: 1;
+}
+
+.hamburger-open .line {
+    background: transparent;
+}
+
+.hamburger-open:hover .line {
+    background: transparent;
+}
+
+.hamburger-open .line::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.hamburger-open .line::after {
+    width: 100%;
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.lower-sidebar {
+    background: var(--lower-sidebar-color);
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lower-sidebar a {
+    color: var(--text-color);
+    font-size: var(--h2-font-size);
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.lower-sidebar a:hover {
+    color: #fff;
+}
+
+.after-header {
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    background: transparent;
+}
+
+.after-header a {
+    margin-top: 25px;
+}
+
+.after-header a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.after-header span {
+    height: 150px;
+    width: 1px;
+    margin-top: 25px;
+    background: var(--text-color);
+}

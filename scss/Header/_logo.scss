@@ -1,0 +1,98 @@
+/* ============== Logo=========== */
+
+.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.hamburger2 {
+    width: 100%;
+    height: 30px;
+    margin-top: unset;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.line2 {
+    width: 25px;
+    height: 2px;
+    background: var(--text-color);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.line2::before,
+.line2::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 2px;
+    background: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.line2::before {
+    width: 100%;
+    top: -8px;
+}
+
+.line2::after {
+    width: 60%;
+    top: 8px;
+}
+
+.hamburger2:hover .line2,
+.hamburger2:hover .line2::before,
+.hamburger2:hover .line2::after {
+    background-color: #fff;
+}
+
+.hamburger-open .line2 {
+    background: transparent;
+}
+
+.hamburger-open:hover .line2 {
+    background: transparent;
+}
+
+.hamburger-open .line2::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.hamburger-open .line2::after {
+    width: 100%;
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.logo {
+    width: 100%;
+    padding: 20px 0;
+    padding-left: 4rem;
+    margin-right: 100px;
+    font-size: var(--h2-font-size);
+    color: var(--accent-color);
+}
+
+.logo a {
+    color: var(--accent-color);
+    padding: 10px 20px;
+    font-weight: 900;
+    font-size: var(--h2-font-size);
+    font-family: var(--fourth-font);
+}
+
+.logo a:hover {
+    transform: scale(1);
+}
