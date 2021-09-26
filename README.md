@@ -3,7 +3,7 @@
 <p>Hey eveyone this is,</p>
 <h1>Nabeel Ahmed</h1>
 
-![demo](images/firstLook.png)
+![demo](./images/firstLook.png)
 
 ## 🚨 Forking this repo (please read!)
 
