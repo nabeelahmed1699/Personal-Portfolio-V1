@@ -3,7 +3,7 @@
 <p>Hey eveyone this is,</p>
 <h1>Nabeel Ahmed</h1>
 
-![demo]()
+![demo](https://github.com/nabeelahmed1699/Personal-Portfolio-V1/blob/main/images/first%20look.PNG)
 
 ## 🚨 Forking this repo (please read!)
 
