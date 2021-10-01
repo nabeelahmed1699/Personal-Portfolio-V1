@@ -44,7 +44,8 @@
 .form input:focus,
 .form textarea:focus {
     outline: 1px solid var(--accent-color);
-    box-shadow: 2px 2px 4px #e79d58, -2px -2px 4px #e79d58;
+    box-shadow: 2px 2px 4px 4px #e79d58, -2px -2px 4px 4px #e79d58;
+    color: var(--accent-color);
 }
 
 .form button {

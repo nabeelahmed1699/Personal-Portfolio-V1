@@ -831,96 +831,40 @@ svg {
 }
 
 .reveal {
+  --background-color: var(--accent-color);
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  white-space: pre;
-}
-
-.reveal span {
-  opacity: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-animation: fade-in 2.4s forwards;
-          animation: fade-in 2.4s forwards;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-inline: 12px;
 }
 
 .reveal::before, .reveal::after {
-  position: absolute;
   content: '';
-  top: 0;
-  height: 100%;
-  width: 2px;
-  background: var(--accent-color);
-  opacity: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  position: absolute;
+  inset: 0;
+  background: var(--background-color);
 }
 
 .reveal::before {
-  left: 50%;
-  -webkit-animation: slide-left 1.5s cubic-bezier(0.7, -0.6, 0.3, 1.5) forwards;
-          animation: slide-left 1.5s cubic-bezier(0.7, -0.6, 0.3, 1.5) forwards;
+  -webkit-animation: typewriter 4s 500ms forwards;
+          animation: typewriter 4s 500ms forwards;
 }
 
 .reveal::after {
-  right: 50%;
-  -webkit-animation: slide-right 1.5s cubic-bezier(0.7, -0.6, 0.3, 1.5) forwards;
-          animation: slide-right 1.5s cubic-bezier(0.7, -0.6, 0.3, 1.5) forwards;
+  background: transparent;
+  border-left: 2px solid var(--accent-color);
 }
 
-@-webkit-keyframes fade-in {
+@-webkit-keyframes typewriter {
   to {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    left: 100%;
   }
 }
 
-@keyframes fade-in {
+@keyframes typewriter {
   to {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@-webkit-keyframes slide-left {
-  to {
-    left: -6%;
-    opacity: 1;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
-
-@keyframes slide-left {
-  to {
-    left: -6%;
-    opacity: 1;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
-
-@-webkit-keyframes slide-right {
-  to {
-    right: -6%;
-    opacity: 1;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
-
-@keyframes slide-right {
-  to {
-    right: -6%;
-    opacity: 1;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    left: 100%;
   }
 }
 
@@ -1437,8 +1381,9 @@ svg {
 .form input:focus,
 .form textarea:focus {
   outline: 1px solid var(--accent-color);
-  -webkit-box-shadow: 2px 2px 4px #e79d58, -2px -2px 4px #e79d58;
-          box-shadow: 2px 2px 4px #e79d58, -2px -2px 4px #e79d58;
+  -webkit-box-shadow: 2px 2px 4px 4px #e79d58, -2px -2px 4px 4px #e79d58;
+          box-shadow: 2px 2px 4px 4px #e79d58, -2px -2px 4px 4px #e79d58;
+  color: var(--accent-color);
 }
 
 .form button {

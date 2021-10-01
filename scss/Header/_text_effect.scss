@@ -6,56 +6,28 @@
 }
 
 .reveal {
+    --background-color: var(--accent-color);
     position: relative;
-    display: flex;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    white-space: pre;
-    span {
-        opacity: 0;
-        transform: scale(0);
-        animation: fade-in 2.4s forwards;
-    }
+    width: fit-content;
+    padding-inline: 12px;
     &::before,
     &::after {
-        position: absolute;
         content: '';
-        top: 0;
-        height: 100%;
-        width: 2px;
-        background: var(--accent-color);
-        opacity: 0;
-        transform: scale(0);
+        position: absolute;
+        inset: 0;
+        background: var(--background-color);
     }
     &::before {
-        left: 50%;
-        animation: slide-left 1.5s cubic-bezier(0.7, -0.6, 0.3, 1.5) forwards;
+        animation: typewriter 4s 500ms forwards;
     }
     &::after {
-        right: 50%;
-        animation: slide-right 1.5s cubic-bezier(0.7, -0.6, 0.3, 1.5) forwards;
+        background: transparent;
+        border-left: 2px solid var(--accent-color);
     }
 }
 
-@keyframes fade-in {
+@keyframes typewriter {
     to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes slide-left {
-    to {
-        left: -6%;
-        opacity: 1;
-        transform: scale(0.9);
-    }
-}
-
-@keyframes slide-right {
-    to {
-        right: -6%;
-        opacity: 1;
-        transform: scale(0.9);
+        left: 100%;
     }
 }
