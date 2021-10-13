@@ -1042,6 +1042,9 @@ svg {
     display: -ms-flexbox;
     display: flex;
   }
+  .body-fixed {
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 1240px) {

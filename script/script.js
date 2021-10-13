@@ -51,12 +51,8 @@ window.addEventListener('scroll', () => {
 function hamburgerClick() {
     hamburger.classList.toggle('hamburger-open');
     hamburger2.classList.toggle('hamburger-open');
-    navbar.classList.toggle('navbar-open')
-    if (navbar.classList.contains('navbar-open')) {
-        document.body.style.overflowY = 'hidden'
-        return;
-    }
-    document.body.style.overflowY = 'visible';
+    navbar.classList.toggle('navbar-open');
+    document.body.classList.toggle('body-fixed');
 }
 
 
