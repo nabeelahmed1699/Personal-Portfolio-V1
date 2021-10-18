@@ -30,6 +30,7 @@ function linkAction() {
     navbar.classList.remove('navbar-open')
     hamburger.classList.remove('hamburger-open');
     hamburger2.classList.remove('hamburger-open');
+    document.body.classList.remove('body-fixed');
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
